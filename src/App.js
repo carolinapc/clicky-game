@@ -9,7 +9,9 @@ import './App.css';
 class App extends React.Component {
 
   state = {
-    cards
+    cards,
+    score: 0,
+    topScore: 0
   }
 
   componentDidMount = () => {
@@ -44,7 +46,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
+        <Header score={this.state.score} topScore={this.state.topScore} />
         <div className="container">
           <div className="wrap-card">
             {this.state.cards.map(card => {

@@ -1,24 +1,26 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Mansalva|Turret+Road&display=swap');
+
+@font-face {
+  font-family: 'game_of_thronesregular';
+  src: url('game_of_thrones-webfont.woff2') format('woff2'),
+       url('game_of_thrones-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
+*{
+  font-family: 'Turret Road', cursive;
+  font-size: 14px;
+}
+h4, h3{
+  font-family: 'game_of_thronesregular';
+}
+h5{
+  margin-top: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+body{
+  background-color: #c1b6b6;
 }
 
 .wrap-card {
@@ -26,18 +28,19 @@
   flex-wrap: wrap;
   max-width: 800px;
   margin: auto;
+  justify-content: center;
 }
 
 .wrap-img{
   width: 210px;
-  height: 240px;
+  height: 210px;
   display: flex;
   align-items: center;
 }
 
 .wrap-img img{
   width: 190px;
-  height: 220px;
+  height: 190px;
   cursor: pointer;
   transition: opacity 0.2s linear;
   padding: 10px;
@@ -47,8 +50,39 @@
 
 .wrap-img img:hover{
   width: 200px;
-  height: 230px;
+  height: 200px;
   align-self: center;
   justify-self: center;
   transition: .20s ease-in-out;
+}
+
+.score{
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.score span{
+  display: inline;
+  margin: 5px 20px;
+  text-align: center;
+  font-family: 'game_of_thronesregular';
+}
+
+.status {
+  display: block;
+  font-family: 'game_of_thronesregular';
+  font-size: 14px;
+}
+
+.header{
+  padding: 40px;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: white;
+  height: 190px;  
+  font-weight: bold;
+  text-align: center;
+  vertical-align: bottom;
 }
