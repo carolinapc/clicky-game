@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = props => {
   const { image, id, hovered } = props.card;
-  const { onHover, onHoverOut } = props;
+  const { onHover, onHoverOut, onCardClick } = props;
 
   let getClassName = () => {
     
@@ -22,6 +22,7 @@ const Card = props => {
         className={getClassName()}
         onMouseOver={() => onHover(id)}
         onMouseOut={() => onHoverOut(id)}
+        onClick={() => onCardClick(id)}
       />
     </div>
   );
