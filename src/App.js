@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Score from './components/Score';
 import Card from './components/Card';
 import cards from './cards.json';
@@ -14,7 +15,8 @@ class App extends React.Component {
     cardsClicked: [],
     score: 0,
     topScore: 0,
-    status: "Click only on different cards"
+    status: "Click only on different cards",
+    guessed: false
   }
 
   componentDidMount = () => {
@@ -74,7 +76,8 @@ class App extends React.Component {
         cardsClicked,
         status: "You guessed correctly!",
         score,
-        topScore
+        topScore,
+        guessed: true
       });
       
     }
@@ -83,7 +86,8 @@ class App extends React.Component {
       this.setState({
         cardsClicked: [],
         status: "You guessed incorrectly!",
-        score: 0
+        score: 0,
+        guessed: false
       });
     }
 
@@ -93,11 +97,11 @@ class App extends React.Component {
   }
 
   render() {
-    const { score, topScore, status, cards } = this.state;
+    const { score, topScore, status, cards, guessed } = this.state;
     return (
       <React.Fragment>
         <Header />
-        <Score score={score} topScore={topScore} status={status} />
+        <Score score={score} topScore={topScore} status={status} guessed={guessed} />
         <div className="container">
           <div className="wrap-card">
             {cards.map(card => {
@@ -113,6 +117,7 @@ class App extends React.Component {
             })}
           </div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }

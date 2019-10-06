@@ -23,6 +23,31 @@ body{
   background-color: #c1b6b6;
 }
 
+.header{
+  padding: 40px;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: white;
+  height: 190px;  
+  font-weight: bold;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.score{
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.score span{
+  display: inline;
+  margin: 5px 20px;
+  text-align: center;
+  font-family: 'game_of_thronesregular';
+}
+
 .wrap-card {
   display: flex;
   flex-wrap: wrap;
@@ -56,33 +81,20 @@ body{
   transition: .20s ease-in-out;
 }
 
-.score{
-  width: 100%;
-  display: block;
-  text-align: center;
+.incorrect-click {
+  animation: blinker-incorrect 1s linear;
 }
 
-.score span{
-  display: inline;
-  margin: 5px 20px;
-  text-align: center;
-  font-family: 'game_of_thronesregular';
+.correct-click {
+  animation: blinker-correct 1s linear;
 }
 
-.status {
-  display: block;
-  font-family: 'game_of_thronesregular';
-  font-size: 14px;
+@keyframes blinker-incorrect {  
+  50% { opacity: 0; }
+  0% {color: red;}
 }
 
-.header{
-  padding: 40px;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  color: white;
-  height: 190px;  
-  font-weight: bold;
-  text-align: center;
-  vertical-align: bottom;
+@keyframes blinker-correct {  
+  50% { opacity: 0; }
+  0% {color: green;}
 }
