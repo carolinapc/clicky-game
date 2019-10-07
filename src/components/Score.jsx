@@ -13,7 +13,8 @@ const Score = (props) => {
   }
 
   return ( 
-    <nav className="navbar navbar-dark bg-dark sticky-top shadow-sm">
+    <>
+    <div className="bg-dark sticky-top shadow-sm">
       <div className="score">
         <span className="text-white">
           Score: <span>{score}</span>
@@ -22,11 +23,11 @@ const Score = (props) => {
           Top Score: <span>{topScore}</span>
         </span>
       </div>
-      
-      <div className="score">
-        <span className={getStatusClass()}>{status}</span>
+      <div className="status">
+          <span className={getStatusClass()}>{status}</span>
       </div>
-    </nav>
+    </div>
+    </>
    );
 }
  

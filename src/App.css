@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 
-html, body, #root, main{
+html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -58,12 +58,16 @@ body{
 .score span span{
   font-size: 20px;
 }
+.status {
+  text-align: center;
+}
 
 .wrap-card {
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
   justify-content: center;
 }
 
@@ -116,4 +120,38 @@ body{
   padding: 40px;
   color: darkgreen;
   font-weight: bold;
+}
+ 
+@media screen and (max-width: 980px){
+  
+}
+
+@media screen and (max-width: 768px){
+  
+}
+
+@media screen and (max-width: 640px){
+  .wrap-img{
+    width: 105px;
+    height: 105px;
+  }
+  
+  .wrap-img img{
+    width: 95px;
+    height: 95px;
+    cursor: pointer;
+    transition: opacity 0.2s linear;
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .wrap-img img:hover{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    justify-self: center;
+    transition: .20s ease-in-out;
+  }
+  
 }

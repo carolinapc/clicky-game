@@ -121,8 +121,6 @@ class App extends React.Component {
     });
   }
 
-
-
   render() {
     const { score, topScore, status, cards, guessed } = this.state;
     const getContent = () => {
@@ -158,7 +156,9 @@ class App extends React.Component {
       <>
         <Header />
         <Score score={score} topScore={topScore} status={status} guessed={guessed} />
-        {getContent()}
+        <main>
+          {getContent()}
+        </main>
         <Footer />
       </>
     );
