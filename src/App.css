@@ -128,6 +128,7 @@ body{
 
 @media screen and (max-width: 768px){
   
+  
 }
 
 @media screen and (max-width: 640px){
@@ -139,19 +140,30 @@ body{
   .wrap-img img{
     width: 95px;
     height: 95px;
-    cursor: pointer;
-    transition: opacity 0.2s linear;
-    padding: 10px;
-    align-self: center;
-    justify-self: center;
   }
   
   .wrap-img img:hover{
     width: 100px;
     height: 100px;
-    align-self: center;
-    justify-self: center;
-    transition: .20s ease-in-out;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+  
+  h3 {
+    font-size: 14px;
+  }
+
+  h5{
+    font-size: 13px;
+  }
+
+  .score span{
+    margin: 5px 10px;
+  }
+  .score span span{
+    font-size: 20px;
   }
   
 }
