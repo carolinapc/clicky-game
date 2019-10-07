@@ -3,7 +3,7 @@ import React from 'react';
 const Score = (props) => {
   const { score, topScore, status, guessed } = props;
 
-  let getClassName = () => {
+  let getStatusClass = () => {
     if (guessed) {
       return "text-white correct-click";
     }
@@ -24,7 +24,7 @@ const Score = (props) => {
       </div>
       
       <div className="score">
-        <span className={getClassName()}>{status}</span>
+        <span className={getStatusClass()}>{status}</span>
       </div>
     </nav>
    );

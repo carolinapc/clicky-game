@@ -11,7 +11,15 @@
 *{
   font-family: 'Turret Road', cursive;
   font-size: 14px;
+  box-sizing: border-box;
 }
+
+html, body, #root, main{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 h4, h3{
   font-family: 'game_of_thronesregular';
 }
@@ -100,4 +108,12 @@ body{
 @keyframes blinker-correct {  
   50% { opacity: 0; }
   0% {color: green;}
+}
+
+.victory {
+  margin: 20px auto;
+  text-align: center;
+  padding: 40px;
+  color: darkgreen;
+  font-weight: bold;
 }

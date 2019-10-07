@@ -1,38 +1,56 @@
 [
   {
     "id": 1,
-    "image": "img/img1.png"
+    "image": "img/img1.png",
+    "imageDefault": "img/img1.png",
+    "imageOver": "img/img-over1.png"
   },
   {
     "id": 2,
-    "image": "img/img2.png"
+    "image": "img/img2.png",
+    "imageDefault": "img/img2.png",
+    "imageOver": "img/img-over2.png"
   },
   {
     "id": 3,
-    "image": "img/img3.png"
+    "image": "img/img3.png",
+    "imageDefault": "img/img3.png",
+    "imageOver": "img/img-over3.png"
   },
   {
     "id": 4,
-    "image": "img/img4.png"
+    "image": "img/img4.png",
+    "imageDefault": "img/img4.png",
+    "imageOver": "img/img-over4.png"
   },
   {
     "id": 5,
-    "image": "img/img5.png"
+    "image": "img/img5.png",
+    "imageDefault": "img/img5.png",
+    "imageOver": "img/img-over5.png"
   },
   {
     "id": 6,
-    "image": "img/img6.png"
+    "image": "img/img6.png",
+    "imageDefault": "img/img6.png",
+    "imageOver": "img/img-over6.png"
   },
   {
     "id": 7,
-    "image": "img/img7.png"
+    "image": "img/img7.png",
+    "imageDefault": "img/img7.png",
+    "imageOver": "img/img-over7.png"
   },
   {
     "id": 8,
-    "image": "img/img8.png"
+    "image": "img/img8.png",
+    "imageDefault": "img/img8.png",
+    "imageOver": "img/img-over8.png"
   },
   {
     "id": 9,
-    "image": "img/img9.png"
+    "image": "img/img9.png",
+    "imageDefault": "img/img9.png",
+    "imageOver": "img/img-over9.png"
   }
 ]

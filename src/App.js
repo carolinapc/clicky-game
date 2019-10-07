@@ -10,17 +10,18 @@ import './App.css';
 
 
 class App extends React.Component {
+  defaultStatus = "Click only on different cards";
 
   state = {
     cards,
     cardsClicked: [],
     score: 0,
     topScore: 0,
-    status: "Click only on different cards",
+    status: this.defaultStatus,
     guessed: true
   }
   
-  getClassName = () => {
+  getWrapCardsClass = () => {
     const classAnimated = "animated shake"; 
 
     if (this.state.guessed) {
@@ -51,7 +52,7 @@ class App extends React.Component {
   onHover = (id) => {
     const cards = this.state.cards.map(card => {
       if (card.id === id) {
-        card.image = card.image.replace("/img", "/img-over");
+        card.image = card.imageOver;
         card.hovered = true;
       }
       return card;
@@ -63,7 +64,7 @@ class App extends React.Component {
   onHoverOut = (id) => {
     const cards = this.state.cards.map(card => {
       if (card.id === id) {
-        card.image = card.image.replace("img-over", "img");
+        card.image = card.imageDefault;
         card.hovered = false;
       }
       return card;
@@ -110,29 +111,56 @@ class App extends React.Component {
     
   }
 
+  restart = () => {
+    this.setState({
+      cardsClicked: [],
+      status: this.defaultStatus,
+      score: 0,
+      topScore: 0,
+      guessed: true
+    });
+  }
+
+
+
   render() {
     const { score, topScore, status, cards, guessed } = this.state;
-    return (
-      <React.Fragment>
-        <Header />
-        <Score score={score} topScore={topScore} status={status} guessed={guessed} />
-        <div className="container">
-          <div className={this.getClassName()}>
-            {cards.map(card => {
-              return (
-                <Card
-                  key={card.id}
-                  card={card}
-                  onHover={this.onHover}
-                  onHoverOut={this.onHoverOut}
-                  onCardClick={this.onCardClick}
-                />
+    const getContent = () => {
+
+      if (this.state.score !== 9) {
+        return (
+          <div className={this.getWrapCardsClass()}>
+          {cards.map(card => {
+            return (
+              <Card
+              key={card.id}
+              card={card}
+              onHover={this.onHover}
+              onHoverOut={this.onHoverOut}
+              onCardClick={this.onCardClick}
+              />
               );
             })}
           </div>
-        </div>
+        );
+      } else {
+        return (
+          <div className="victory">
+            <h4>YOU WON!!</h4>
+            <h4>CONGRATULATIONS!</h4>
+            <button className="btn btn-dark" onClick={this.restart}>Play Again</button>
+          </div>
+        );
+      }
+    }
+    
+    return (
+      <>
+        <Header />
+        <Score score={score} topScore={topScore} status={status} guessed={guessed} />
+        {getContent()}
         <Footer />
-      </React.Fragment>
+      </>
     );
   }
 }

@@ -21,7 +21,7 @@ class Footer extends React.Component {
 
   render() {
     return ( 
-      <footer className="page-footer bg-dark text-white p-2 text-center">
+      <footer className="bg-dark text-white p-2 mt-auto text-center">
         <audio controls style={{display: 'none'}} id="player" autoPlay>
           <source src="bgsound.mp3" type="audio/mpeg" />
         </audio>

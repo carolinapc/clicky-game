@@ -4,7 +4,7 @@ const Card = props => {
   const { image, id, hovered } = props.card;
   const { onHover, onHoverOut, onCardClick } = props;
 
-  let getClassName = () => {
+  let getImageClass = () => {
     
     if (hovered) {
       return "rounded img-thumbnail shadow-lg";
@@ -19,7 +19,7 @@ const Card = props => {
       <img
         src={image}
         alt={id}
-        className={getClassName()}
+        className={getImageClass()}
         onMouseOver={() => onHover(id)}
         onMouseOut={() => onHoverOut(id)}
         onClick={() => onCardClick(id)}
