@@ -47,6 +47,9 @@ body{
   text-align: center;
   font-family: 'game_of_thronesregular';
 }
+.score span span{
+  font-size: 20px;
+}
 
 .wrap-card {
   display: flex;

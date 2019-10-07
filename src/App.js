@@ -5,6 +5,7 @@ import Score from './components/Score';
 import Card from './components/Card';
 import cards from './cards.json';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'animate.css';
 import './App.css';
 
 
@@ -16,8 +17,21 @@ class App extends React.Component {
     score: 0,
     topScore: 0,
     status: "Click only on different cards",
-    guessed: false
+    guessed: true
   }
+  
+  getClassName = () => {
+    const classAnimated = "animated shake"; 
+
+    if (this.state.guessed) {
+      return "wrap-card";
+    }
+    else {
+      return `wrap-card ${classAnimated}`;
+    }
+      
+  }
+  
 
   componentDidMount = () => {
     const cards = this.state.cards.map(card => { card.hovered = false; return card; });
@@ -103,7 +117,7 @@ class App extends React.Component {
         <Header />
         <Score score={score} topScore={topScore} status={status} guessed={guessed} />
         <div className="container">
-          <div className="wrap-card">
+          <div className={this.getClassName()}>
             {cards.map(card => {
               return (
                 <Card

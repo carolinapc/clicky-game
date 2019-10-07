@@ -16,10 +16,10 @@ const Score = (props) => {
     <nav className="navbar navbar-dark bg-dark sticky-top shadow-sm">
       <div className="score">
         <span className="text-white">
-          Score: {score}
+          Score: <span>{score}</span>
         </span>
         <span className="text-white">
-          Top Score: {topScore}
+          Top Score: <span>{topScore}</span>
         </span>
       </div>
       
