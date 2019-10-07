@@ -1,1 +1,1 @@
-# memory-game
+# clicky-game
