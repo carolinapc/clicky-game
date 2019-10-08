@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Score from './components/Score';
 import Card from './components/Card';
 import cards from './cards.json';
+import 'normalize.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'animate.css';
 import './App.css';

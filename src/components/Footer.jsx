@@ -2,12 +2,12 @@ import React from 'react';
 
 class Footer extends React.Component {
   state = {
-    btnAudioText: "Pause Audio"
+    btnAudioText: "Play/Pause Audio"
   };
 
   //controls the audio
   toggledAudio = () => {
-    const player = document.getElementById('player');
+    const player = document.getElementById("player");
 
     if (player.paused) {
       player.play();
