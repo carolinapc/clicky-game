@@ -22,6 +22,7 @@ html, body, #root {
 
 h4, h3{
   font-family: 'game_of_thronesregular';
+  text-shadow: 0 0 10px #FFFFFF;
 }
 h5{
   margin-top: 5px;
@@ -148,11 +149,11 @@ body{
   }
 
   h4 {
-    font-size: 16px;
+    font-size: 14px;
   }
   
   h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   h5{
